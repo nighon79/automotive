@@ -1,0 +1,382 @@
+/* font-face */
+
+@font-face {
+    font-family: 'Quite-Chocolatey';
+    src: url('../fonts/QuiteChocolatey.woff2') format('woff2'),
+        url('../fonts/QuiteChocolatey.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT-Serif';
+    src: url('../fonts/PTSerif-Regular.woff2') format('woff2'),
+        url('../fonts/PTSerif-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Med';
+    src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* variables */
+
+:root {
+    --ff-text: 'PT-Serif';
+    --ff-title: 'Montserrat-Bold';
+    --ff-botton: 'Montserrat-Med';
+    --ff-logo: 'Quite-Chocolatey';
+
+    --cr-black: #161616;
+    --cr-white: #ffffff;
+    --cr-primary: #130E27;
+    --cr-secondary: #C62314;
+}
+
+/* ff - font-family */
+/* cr - color */
+
+/* reset */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ol,
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+/* box-sizing */
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+/* common */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--ff-text), serif;
+    color: var(--cr-black);
+    font-size: 20px;
+    letter-spacing: -0.03em;
+}
+
+.container {
+    max-width: 1090px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* header */
+
+.header {
+    position: relative;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__inner-position {
+    max-width: 1060px;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+}
+
+.logo {
+    font-family: var(--ff-logo), sans-serif;
+}
+
+.header__logo {
+    font-size: 88px;
+    color: var(--cr-white);
+    transition: filter .3s;
+}
+
+.header__logo:hover {
+    filter: drop-shadow(3px 3px 3px rgba(20, 20, 20, 0.5));
+}
+
+.nav {
+    font-family: var(--ff-botton), sans-serif;
+    color: var(--cr-white);
+    text-transform: uppercase;
+}
+
+.header__nav {
+    font-size: 18px;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .nav__item:not(:last-child) {
+    margin-right: 34px;
+} */
+
+.nav__item {
+    padding: 10px 17px;
+    border-radius: 5px;
+    transition: background-color .3s;
+}
+
+.nav__item:hover {
+    background-color: var(--cr-primary);
+}
+
+/* section HERO */
+
+.hero {
+    background-color: var(--cr-secondary);
+    background: url('../img/bg.png') center/cover no-repeat;
+    padding-top: 210px;
+    padding-bottom: 140px;
+}
+
+.hero__inner {
+    /* max-width: 533px; */
+    max-width: 50%;
+}
+
+.title {
+    font-family: var(--ff-title), sans-serif;
+    color: var(--cr-primary);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+.hero__title {
+    font-size: 90px;
+    line-height: 90%;
+    margin-bottom: 50px;
+}
+
+.hero__title span {
+    color: var(--cr-white);
+}
+
+.hero__text {
+    color: var(--cr-white);
+}
+.text {
+    line-height: 140%;
+    letter-spacing: -0.03em;
+}
+
+/* section services */
+
+.services {
+    background-color: #E5E5E5;
+    scroll-margin-top: 50px;
+    padding: 50px 0 70px;
+}
+
+.services__title {
+    font-size: 50px;
+    margin-bottom: 80px;
+}
+
+.services__title span {
+    color: var(--cr-secondary);
+}
+
+.services__content {
+    /* display: grid;
+    grid-template-columns: 160px 160px 160px 160px;
+    gap: 20px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 105px;
+}
+
+i {
+    font-size: 150px;
+    color: var(--cr-primary);
+    margin-bottom: 40px;
+}
+.services__item {
+    max-width: 170px;
+    text-align: center;
+    justify-self: center;
+}
+
+/* our story */
+
+.story {
+    background-color: var(--cr-primary);
+    padding: 30px 0;
+}
+
+.story__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 177px;
+}
+.story__text {
+    color: var(--cr-white);
+}
+
+.btn {
+    cursor: pointer;
+    color: var(--cr-white);
+    font-family: var(--ff-botton), sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    border-radius: 5px;
+    transition: transform .3s,
+                background-color .3s,
+                box-shadow .1s;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.story__btn {
+    padding: 19px;
+    min-width: 270px;
+}
+
+.btn--red {
+    background-color: var(--cr-secondary);
+}
+
+.btn--red:hover {
+    background-color: #C04B40;
+}
+
+.btn--red:active {
+    background-color: #A71608;
+}
+
+.btn--red:focus {
+    box-shadow: inset 0px 0px 10px 0px #2D2D2D;
+}
+
+/* pricing */
+
+.pricing {
+    background-color: #EFEFEF;
+    padding: 50px 0 70px;
+}
+
+.pricing__title {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pricing__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.card__item {
+    text-align: center;
+    background-color: var(--cr-white);
+    padding: 35px;
+    flex: 1;
+}
+.card__title {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+.card__price {
+    font-family: var(--ff-title), sans-serif;
+    color: var(--cr-secondary);
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.card__list {
+    margin-bottom: 40px;
+}
+
+.card__btn {
+    padding: 12px;
+    min-width: 205px;
+}
+
+.btn--dark {
+    background-color: var(--cr-primary);
+}
+
+.btn--dark:hover {
+    background-color: #3D3462;
+}
+
+.btn--dark:active {
+    background-color: #080512;
+}
+
+.btn--dark:focus {
+    box-shadow: inset 0px 0px 5px 1px rgba(232.5168192087506,232.5168192087506,232.5168192087506,0.5);
+}
+
+
